@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GLOW — Hair Studio | Midvaal</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;700&family=Fraunces:opsz,ital,wght@9..144,0..100,400;9..144,1,400&display=swap" rel="stylesheet">
+<style>
+*{font-family:'Bricolage Grotesque',sans-serif}
+.serif{font-family:'Fraunces',serif}
+</style>
+</head>
+<body class="bg-[#FFF9F3] text-[#2B1A12]">
+
+<!-- FLOATING NAV -->
+<nav class="sticky top-0 z-50 px-4 pt-4">
+  <div class="bg-white/90 backdrop-blur border border-black/5 rounded-full px-6 md:px-8 py-4 flex justify-between items-center shadow-sm max-w-[1280px] mx-auto">
+    <h1 class="font-bold text-[18px] tracking-tight">GLOW<span class="font-normal opacity-60">.STUDIO</span></h1>
+    <div class="hidden md:flex gap-8 text-[12px] font-semibold tracking-[0.2em] opacity-70">
+      <a href="#services">SERVICES</a><a href="#gallery">GALLERY</a><a href="#reviews">REVIEWS</a>
+    </div>
+    <a href="#booking" class="bg-[#2B1A12] text-white px-5 py-2 rounded-full text-[11px] font-bold tracking-widest">BOOK NOW — <span id="nav-count">0</span></a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="max-w-[1280px] mx-auto px-4 mt-6 grid md:grid-cols-12 gap-4">
+  <div class="md:col-span-7 bg-[#2B1A12] text-[#FFF9F3] rounded-[36px] p-8 md:p-12 flex flex-col justify-between min-h-[600px]">
+    <div>
+      <p class="bg-[#FF4D8D] inline-block px-3 py-1 rounded-full text-[10px] font-bold tracking-widest text-white">MIDVAAL • EST. 2022 • 400+ SLAYS</p>
+      <h2 class="serif text-7xl md:text-[92px] leading-[0.85] mt-8">Braids<br><span class="italic font-normal">that don't</span><br>itch.</h2>
+    </div>
+    <div>
+      <div class="grid grid-cols-2 gap-4 mt-10">
+        <div class="bg-white/10 rounded-[20px] p-4"><p class="text-[11px] opacity-60 tracking-widest">LASTS</p><p class="font-bold mt-1">6 weeks, no flakes</p></div>
+        <div class="bg-white/10 rounded-[20px] p-4"><p class="text-[11px] opacity-60 tracking-widest">TIME</p><p class="font-bold mt-1">No double-booking</p></div>
+      </div>
+      <div class="mt-6 flex gap-3">
+        <a href="#services" class="bg-[#FFD6E0] text-[#2B1A12] px-8 py-4 rounded-full font-bold text-[12px] tracking-widest">SEE PRICES</a>
+        <a href="#booking" class="border border-white/20 px-8 py-4 rounded-full font-bold text-[12px] tracking-widest">BOOK ON WHATSAPP</a>
+      </div>
+    </div>
+  </div>
+  <div class="md:col-span-5 rounded-[36px] overflow-hidden relative min-h-[600px] bg-[#FFD6E0]">
+    <img id="hero-img" src="cover.jfif" class="w-full h-full object-cover">
+    <div class="absolute top-6 left-6 bg-white rounded-full px-4 py-2 text-[11px] font-bold shadow">★ 4.9 • 212 REVIEWS • WALK-INS WELCOME</div>
+    <div class="absolute bottom-6 left-6 right-6 bg-white rounded-[24px] p-5 flex justify-between items-center shadow-xl">
+      <div><p class="font-bold text-[13px]">This week: Boho Knotless</p><p class="text-[11px] opacity-60 mt-1">R850 • 4.5 hrs • wash included</p></div>
+      <button onclick="selectService(2)" class="bg-[#2B1A12] text-white w-12 h-12 rounded-full font-bold">+</button>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="max-w-[1280px] mx-auto px-4 mt-4">
+  <div class="bg-white rounded-[36px] p-8 md:p-12 border border-black/5">
+    <div class="flex flex-wrap justify-between items-end gap-4">
+      <h3 class="serif text-5xl md:text-6xl">Menu</h3>
+      <p class="text-[12px] max-w-[32ch] opacity-60 leading-5">Click + to add to booking. Total updates live. No fake buttons. All prices include wash & blow.</p>
+    </div>
+    <div id="services-grid" class="grid md:grid-cols-3 gap-5 mt-10"></div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="max-w-[1280px] mx-auto px-4 mt-4 grid md:grid-cols-4 gap-4">
+  <div class="md:col-span-3 bg-[#FFD6E0] rounded-[36px] p-8 md:p-12">
+    <h4 class="serif text-4xl">Real work, not Pinterest.</h4>
+    <div class="grid grid-cols-3 gap-3 mt-8">
+      <div class="aspect-[3/4] rounded-[20px] overflow-hidden"><img src="salon.jfif" class="w-full h-full object-cover"></div>
+      <div class="aspect-[3/4] rounded-[20px] overflow-hidden"><img src="cornrows.jfif" class="w-full h-full object-cover"></div>
+      <div class="aspect-[3/4] rounded-[20px] overflow-hidden"><img src="installation.jfif" class="w-full h-full object-cover"></div>
+    </div>
+  </div>
+  <div id="reviews" class="bg-[#2B1A12] text-[#FFF9F3] rounded-[36px] p-8 flex flex-col justify-between">
+    <div><p class="text-[11px] tracking-[0.3em] opacity-60">REVIEWS</p><h4 class="serif text-3xl mt-4 leading-tight">"She took her time. My scalp wasn't bleeding after. First time."</h4></div>
+    <div class="mt-8 space-y-4">
+      <div class="bg-white/10 rounded-[16px] p-4"><p class="text-[12px]">"My boho lasted 7 weeks 😭"</p><p class="text-[10px] opacity-50 mt-2">— Thando, Meyerton</p></div>
+      <div class="bg-white/10 rounded-[16px] p-4"><p class="text-[12px]">"My boho lasted 7 weeks 😭"</p><p class="text-[10px] opacity-50 mt-2">— Thando, Meyerton</p></div>
+      <div class="bg-white/10 rounded-[16px] p-4"><p class="text-[12px]">"My boho lasted 7 weeks 😭"</p><p class="text-[10px] opacity-50 mt-2">— Thando, Meyerton</p></div>
+      <div class="bg-white/10 rounded-[16px] p-4"><p class="text-[12px]">"Wig install still flat after gym"</p><p class="text-[10px] opacity-50 mt-2">— Amahle, Vereeniging</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking" class="max-w-[1280px] mx-auto px-4 mt-4 mb-10 grid md:grid-cols-12 gap-4">
+  <div class="md:col-span-7 bg-[#FF4D8D] rounded-[36px] p-8 md:p-10 text-white">
+    <div class="flex justify-between items-center"><h4 class="serif text-4xl md:text-5xl">Booking</h4><button onclick="clearBooking()" class="bg-white/20 px-4 py-1.5 rounded-full text-[11px] font-bold">CLEAR</button></div>
+    <div id="booking-list" class="mt-8 space-y-3 min-h-[200px]"></div>
+    <div class="border-t border-white/20 mt-8 pt-6 space-y-3">
+      <div class="flex justify-between text-[13px] opacity-80"><span>Services</span><span id="count">0</span></div>
+      <div class="flex justify-between text-2xl font-bold"><span>Total</span><span id="total">R0</span></div>
+    </div>
+  </div>
+  <div class="md:col-span-5 bg-white rounded-[36px] p-8 md:p-10 border border-black/5">
+    <h5 class="font-bold tracking-widest text-[12px]">YOUR DETAILS → WHATSAPP</h5>
+    <input id="name" placeholder="Your name" class="mt-6 w-full bg-[#FFF9F3] border border-black/10 rounded-full px-6 py-4 text-[14px] outline-none">
+    <input id="phone" placeholder="WhatsApp number" class="mt-3 w-full bg-[#FFF9F3] border border-black/10 rounded-full px-6 py-4 text-[14px] outline-none">
+    <div class="grid grid-cols-2 gap-3 mt-3">
+      <input id="date" type="date" class="bg-[#FFF9F3] border border-black/10 rounded-full px-6 py-4 text-[14px] outline-none">
+      <select id="time" class="bg-[#FFF9F3] border border-black/10 rounded-full px-6 py-4 text-[14px] outline-none">
+        <option>09:00</option><option>10:30</option><option>12:00</option><option>13:30</option><option>15:00</option><option>16:30</option>
+      </select>
+    </div>
+    <textarea id="note" placeholder="Anything? (small head, sensitive scalp, etc)" class="mt-3 w-full bg-[#FFF9F3] border border-black/10 rounded-[24px] px-6 py-4 text-[14px] h-24 outline-none"></textarea>
+    <button onclick="checkout()" class="mt-6 w-full bg-[#2B1A12] text-white rounded-full py-5 font-bold text-[12px] tracking-[0.2em]">SEND TO WHATSAPP — <span id="checkout-total">R0</span></button>
+    <p class="text-[11px] opacity-50 mt-4 text-center">Demo: Opens WhatsApp with full booking details pre-filled. Replace number with client's.</p>
+  </div>
+</section>
+
+<script>
+const services = [
+  {id:1, name:"KNOTLESS BRAIDS — MEDIUM", price:550, time:"3.5 hrs", tag:"MOST BOOKED"},
+  {id:2, name:"BOHO KNOTLESS + CURLS", price:850, time:"4.5 hrs", tag:"VIRAL 🔥"},
+  {id:3, name:"STITCH CORNROWS", price:350, time:"2 hrs", tag:"QUICK"},
+  {id:4, name:"WIG INSTALL — MELT + STYLE", price:450, time:"2 hrs", tag:"LAID"},
+  {id:5, name:"GODDESS LOCS — CURLY ENDS", price:650, time:"4 hrs", tag:"BOHO"},
+  {id:6, name:"BOX BRAIDS JUMBO", price:400, time:"2.5 hrs", tag:"CLASSIC"},
+];
+
+function getBook(){return JSON.parse(localStorage.getItem('glow_booking')||'[]')}
+function saveBook(b){localStorage.setItem('glow_booking',JSON.stringify(b))}
+function selectService(id){addService(id); document.getElementById('booking').scrollIntoView({behavior:'smooth'})}
+function addService(id){
+  let book=getBook();
+  if(!book.find(b=>b.id===id)) book.push(services.find(s=>s.id===id));
+  saveBook(book); render();
+}
+function removeService(id){saveBook(getBook().filter(s=>s.id!==id)); render()}
+function clearBooking(){saveBook([]); render()}
+
+function render(){
+  const grid=document.getElementById('services-grid');
+  grid.innerHTML=services.map(s=>`
+    <div class="bg-[#FFF9F3] rounded-[28px] p-5 border border-black/5">
+      <div class="flex justify-between items-start">
+        <span class="bg-[#2B1A12] text-white text-[10px] font-bold tracking-widest px-3 py-1 rounded-full">${s.tag}</span>
+        <span class="text-[12px] opacity-60">${s.time}</span>
+      </div>
+      <h4 class="font-bold text-[14px] mt-4 leading-tight">${s.name}</h4>
+      <div class="flex justify-between items-center mt-6">
+        <span class="font-bold text-[18px]">R${s.price}</span>
+        <button onclick="addService(${s.id})" id="btn-${s.id}" class="bg-white border border-black/10 w-10 h-10 rounded-full font-bold hover:bg-black hover:text-white transition">+</button>
+      </div>
+    </div>
+  `).join('');
+
+  const book=getBook();
+  const list=document.getElementById('booking-list');
+  if(!book.length) list.innerHTML=`<div class="bg-white/15 rounded-[20px] p-6 text-center"><p class="font-bold">No services yet</p><p class="text-[13px] opacity-70 mt-1">Tap + on services above. They appear here instantly.</p></div>`;
+  else list.innerHTML=book.map(s=>`
+    <div class="bg-white/15 backdrop-blur rounded-full px-5 py-3 flex justify-between items-center">
+      <span class="font-bold text-[12px] tracking-wide">${s.name}</span>
+      <span class="flex items-center gap-3"><span class="font-bold">R${s.price}</span><button onclick="removeService(${s.id})" class="bg-white text-[#FF4D8D] w-6 h-6 rounded-full text-[12px] font-bold">x</button></span>
+    </div>
+  `).join('');
+
+  const total=book.reduce((a,b)=>a+b.price,0);
+  document.getElementById('count').innerText=book.length;
+  document.getElementById('total').innerText='R'+total;
+  document.getElementById('checkout-total').innerText='R'+total;
+  document.getElementById('nav-count').innerText=book.length;
+
+  book.forEach(b=>{
+    const btn=document.getElementById('btn-'+b.id);
+    if(btn){btn.innerText='✓'; btn.className='bg-[#2B1A12] text-white w-10 h-10 rounded-full font-bold'}
+  });
+}
+
+function checkout(){
+  const book=getBook();
+  if(!book.length) return alert('Add a service first!');
+  const name=document.getElementById('name').value||'Client';
+  const date=document.getElementById('date').value||'TBD';
+  const time=document.getElementById('time').value;
+  const note=document.getElementById('note').value;
+  const total=book.reduce((a,b)=>a+b.price,0);
+  const text=`Hi GLOW STUDIO 💕 New booking:%0A%0A${book.map(s=>`• ${s.name} - R${s.price} (${s.time})`).join('%0A')}%0A%0ATotal: R${total}%0AName: ${name}%0ADate: ${date} at ${time}%0ANote: ${note || 'None'}`;
+  window.open(`https://wa.me/27600000000?text=${text}`, '_blank');
+}
+
+render();
+</script>
+</body>
+</html>
